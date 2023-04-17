@@ -1,0 +1,25 @@
+﻿@model Veer.Models.SpecialTags
+@{
+    ViewData["Title"] = "Create";
+}
+<br />
+
+<h2 class="text-info"> Special Tag Name</h2>
+<form asp-action="Create" method="post">
+    <div class="p-4 rounded border">
+        <div asp-validation-summary="ModelOnly" class="text-danger">
+
+        </div>
+        <div class="col-2">
+            <label asp-for="SpecialTag"></label>
+        </div>
+        <div class="col-5">
+            <input asp-for="SpecialTag" class="form-control" />
+        </div>
+        <span asp-validation-for="SpecialTag" class="text-danger"></span>
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary" value="Save" />
+            <a asp-action="Index" class="btn btn-success">Back To List</a>
+        </div>
+    </div>
+</form>
